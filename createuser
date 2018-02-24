@@ -13,6 +13,8 @@ class CreateUser:
 
     def __eq__(self, other: Any):
         """ Checks whether self is equivalent to other
+
+        >>> a = CreateUser
         """
         return type(self) == type(other) and \
             self.name == other.name and \
@@ -23,7 +25,8 @@ class CreateUser:
         """
         Verify that the email inputted is a valid email.
         """
-        # incomplete
+        return ("@" in self.email) and (self.email[self.email.find('@') + 1:] in '.')
+        # not the most accurate version yet --> will use regex
 
     def check_password(self) -> bool:
         """
