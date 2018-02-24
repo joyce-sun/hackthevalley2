@@ -1,0 +1,40 @@
+from typing import Any
+
+class CreateUser:
+    """ A CreateUser Class."""
+
+    def __init__(self) -> None:
+        """
+        Initialize a CreateUser class.
+        """
+        self.name = input("Input your full name.")
+        self.email = input("Input your email address")
+        self.password = input("Input your password")
+
+    def __eq__(self, other: Any):
+        """ Checks whether self is equivalent to other
+        """
+        return type(self) == type(other) and \
+            self.name == other.name and \
+            self.email == other.email and \
+            self.password == other.password
+
+    def is_valid_email(self, email: "CreateUser") -> bool:
+        """
+        Verify that the email inputted is a valid email.
+        """
+        # incomplete
+
+    def check_password(self) -> bool:
+        """
+        Return True if password is Valid. A valid password must be at least 6 characters, one
+        number and one capital letter. A valid password must only contain numbers and letters.
+        """
+        upper = False
+        num = False
+
+        for ch in self.password:
+            if ch.isupper() and ch.isalnum():
+                upper = True
+                num = True
+        return (len(self.password) > 6) and upper and num
