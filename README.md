@@ -4,6 +4,9 @@ Class Network:
     def __init__(self):
     def __str__(self):
     def __eq__(self):
+    def search
+    def barcode
+    def scan_barcode
 
 Class SocialMedia(Network):
     def __init__(self):
@@ -16,12 +19,6 @@ Class SocialMedia(Network):
     def instagram
     def snapchat
     def linkedin
-   
-Class Barcode:
-    def __init__(self):
-    def __str__(self):
-    def __eq__(self):
-    def scan_code():
 
 Class CreateUser:
     def __init__(self):
@@ -38,3 +35,8 @@ Class Display:
     def __init__(self):
     def __str__(self):
     def __eq__(self):
+    def name
+    def photo
+    def barcode
+    def username
+    def social_media
